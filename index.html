@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Алаша Сарыбас — шежіре, естелік, тарихи деректер</title>
+<meta name="description" content="Алаша руы Сарыбас атасының шежіресі, Құспан Бегешов естелігі мен мұрағаты, Есәлі бай қонысы, Көкбие шоқысы және Сарыбастар қорымының құлпытастары.">
+<link rel="icon" href="images/emblem.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green-900:#0a2a20; --green-800:#0f3d2e; --green-700:#165240; --green-100:#e4ece6;
+  --gold:#d9a520; --gold-soft:#ecc766; --gold-deep:#a67a0c;
+  --paper:#f7f2e6; --card:#fffdf7; --ink:#1d241f; --muted:#5d665f; --line:#ddd3bb;
+  --serif:"Noto Serif",Georgia,"Times New Roman",serif;
+  --sans:"Noto Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--green-700)}
+h1,h2,h3{font-family:var(--serif);line-height:1.15;margin:0;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+.narrow{max-width:760px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:rgba(10,42,32,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(217,165,32,.35)}
+.nav .wrap{display:flex;align-items:center;gap:18px;height:60px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--gold-soft);text-decoration:none;font-family:var(--serif);font-weight:700;letter-spacing:.06em;white-space:nowrap}
+.brand img{width:36px;height:36px;border-radius:50%}
+.links{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.links::-webkit-scrollbar{display:none}
+.links a{color:#e9efe9;text-decoration:none;font-size:14.5px;padding:8px 11px;border-radius:999px;white-space:nowrap}
+.links a:hover,.links a:focus-visible{background:rgba(217,165,32,.18);color:var(--gold-soft)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;color:#f4efdf;
+  background:radial-gradient(900px 480px at 78% 20%,rgba(217,165,32,.20),transparent 62%),linear-gradient(160deg,var(--green-900),var(--green-800) 55%,#0c3327)}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:10px;
+  background:repeating-linear-gradient(90deg,var(--gold) 0 14px,transparent 14px 22px,var(--gold-deep) 22px 28px,transparent 28px 36px)}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .9fr;gap:48px;align-items:center;padding:76px 0 86px}
+.eyebrow{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:18px}
+.hero h1{font-size:clamp(44px,7.4vw,92px);letter-spacing:.02em;color:#fff}
+.hero h1 span{display:block;color:var(--gold)}
+.lead{font-size:clamp(17px,1.6vw,20px);color:#d8e2da;max-width:56ch;margin:22px 0 30px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15.5px;border:1px solid var(--gold)}
+.btn.primary{background:var(--gold);color:#1c1503}
+.btn.ghost{color:var(--gold-soft)}
+.btn:hover{filter:brightness(1.08)}
+.emblem{justify-self:center;width:min(380px,78vw);border-radius:50%;box-shadow:0 0 0 10px rgba(217,165,32,.12),0 30px 70px rgba(0,0,0,.45)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(217,165,32,.3);border:1px solid rgba(217,165,32,.3);border-radius:16px;overflow:hidden;margin-top:44px}
+.stats div{background:rgba(10,42,32,.75);padding:18px 16px}
+.stats b{display:block;font-family:var(--serif);font-size:30px;color:var(--gold);font-variant-numeric:tabular-nums}
+.stats span{font-size:13.5px;color:#cbd8ce}
+
+/* sections */
+section{padding:84px 0}
+section.alt{background:var(--card);border-block:1px solid var(--line)}
+section.dark{background:linear-gradient(170deg,var(--green-900),var(--green-800));color:#eef2ea}
+section.dark .kicker{color:var(--gold-soft)}
+section.dark h2{color:#fff}
+section.dark .sub,section.dark figcaption{color:#c9d6cc}
+.kicker{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:12px}
+.kicker::before{content:"";width:34px;height:2px;background:var(--gold)}
+h2{font-size:clamp(30px,4.2vw,48px);color:var(--green-800);margin-bottom:16px}
+h3{font-size:clamp(21px,2.2vw,26px);color:var(--green-800);margin:44px 0 16px}
+section.dark h3{color:var(--gold-soft)}
+.sub{font-size:19px;color:var(--muted);max-width:64ch;margin-bottom:34px}
+.cols{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:start}
+.prose p{max-width:68ch}
+.note{font-size:14.5px;color:var(--muted);border-left:3px solid var(--gold);padding:4px 0 4px 14px;margin:22px 0}
+section.dark .note{color:#c9d6cc}
+
+.facts{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.facts li{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+section:not(.alt) .facts li{background:var(--card)}
+.facts b{display:block;font-family:var(--serif);color:var(--green-800);font-size:18px;margin-bottom:2px}
+.facts span{color:var(--muted);font-size:15.5px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0;padding:0;list-style:none}
+.tags li{font-size:14.5px;padding:6px 12px;border-radius:999px;background:var(--green-100);color:var(--green-800);border:1px solid #cddacf}
+
+/* timeline */
+.tl{list-style:none;margin:0;padding:0 0 0 22px;border-left:2px solid var(--gold)}
+.tl li{position:relative;padding:0 0 22px 20px}
+.tl li::before{content:"";position:absolute;left:-29px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px var(--paper)}
+section.alt .tl li::before{box-shadow:0 0 0 4px var(--card)}
+section.dark .tl li::before{box-shadow:0 0 0 4px var(--green-800)}
+.tl time{display:block;font-family:var(--serif);font-weight:700;color:var(--green-800);font-size:18px}
+section.dark .tl time{color:var(--gold-soft)}
+
+/* photos */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px}
+.grid.docs{grid-template-columns:repeat(auto-fill,minmax(170px,1fr))}
+.grid.two{grid-template-columns:repeat(2,1fr)}
+.grid.three{grid-template-columns:repeat(3,1fr)}
+.grid.wide{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.grid.tall{grid-template-columns:repeat(auto-fill,minmax(190px,1fr))}
+.ph{margin:0}
+.zoom{display:block;width:100%;padding:0;border:0;background:#e9e2cf;border-radius:12px;overflow:hidden;cursor:zoom-in;aspect-ratio:4/3;box-shadow:0 1px 0 rgba(0,0,0,.04),0 10px 24px rgba(15,61,46,.10)}
+.zoom img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.zoom:hover img{transform:scale(1.04)}
+.zoom:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.docs .zoom,.tall .zoom{aspect-ratio:3/4}
+.three .zoom{aspect-ratio:1/1}
+.two .zoom{aspect-ratio:4/3}
+.ph.free .zoom,.free .zoom{aspect-ratio:auto;background:transparent}
+.free .zoom img{height:auto;object-fit:contain}
+figcaption{font-size:14px;color:var(--muted);margin-top:8px;line-height:1.4}
+
+.acc{border:1px solid var(--line);border-radius:14px;background:var(--card);margin-bottom:12px;overflow:hidden}
+section.alt .acc{background:var(--paper)}
+.acc summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 20px;font-family:var(--serif);font-weight:600;font-size:19px;color:var(--green-800)}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary em{font-family:var(--sans);font-style:normal;font-weight:400;font-size:14px;color:var(--muted);white-space:nowrap}
+.acc summary em::after{content:" +";color:var(--gold-deep);font-weight:700}
+.acc[open] summary em::after{content:" −"}
+.acc .grid{padding:4px 20px 22px}
+
+/* tree */
+.tree{display:grid;gap:10px;justify-items:center;margin:8px 0 6px}
+.gen{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.node{padding:9px 15px;border-radius:10px;background:var(--card);border:1px solid var(--line);font-size:15.5px;text-align:center}
+.node small{display:block;color:var(--muted);font-size:12.5px}
+.node.main{background:var(--green-800);color:#fff;border-color:var(--green-800);font-family:var(--serif);font-weight:600}
+.node.main small{color:var(--gold-soft)}
+.arrow{color:var(--gold-deep);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+
+/* table */
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:15.5px}
+th,td{text-align:left;padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{background:var(--green-800);color:#f3ecd6;font-weight:600;font-size:13.5px;letter-spacing:.06em;text-transform:uppercase}
+tbody tr:last-child>*{border-bottom:0}
+tbody th{font-family:var(--serif);color:var(--green-800)}
+td.n{font-variant-numeric:tabular-nums;color:var(--gold-deep);font-weight:700}
+
+.award{display:grid;grid-template-columns:.62fr 1.38fr;gap:28px;align-items:center;background:rgba(255,255,255,.05);border:1px solid rgba(217,165,32,.3);border-radius:20px;padding:26px;margin-bottom:22px}
+.award .zoom{aspect-ratio:auto;background:#fff;box-shadow:none}
+.award .zoom img{height:auto;object-fit:contain}
+.award h3{margin:0 0 8px}
+.award p{color:#d5dfd7}
+
+.passport{display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:start;margin-top:26px}
+.passport .zoom,.single .zoom{aspect-ratio:auto}
+.passport .zoom img,.single .zoom img{height:auto}
+dl.kv{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 18px;font-size:16px}
+dl.kv dt{color:var(--muted)}
+dl.kv dd{margin:0;font-weight:600;color:var(--green-800)}
+
+.num{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:26px 0 34px}
+.num div{border:1px solid var(--line);border-radius:14px;padding:18px;background:var(--card)}
+.num b{display:block;font-family:var(--serif);font-size:32px;color:var(--green-800);font-variant-numeric:tabular-nums;line-height:1.1}
+.num span{font-size:14.5px;color:var(--muted)}
+
+footer{background:var(--green-900);color:#c9d6cc;padding:54px 0 40px;font-size:15px}
+footer .wrap{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
+footer img{width:84px;border-radius:50%}
+footer b{color:var(--gold-soft);font-family:var(--serif);font-size:20px;display:block;margin-bottom:6px}
+footer a{color:var(--gold-soft)}
+footer p{margin:0 0 6px;max-width:80ch}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:50;background:rgba(6,20,15,.94);display:none;flex-direction:column;align-items:center;justify-content:center;padding:18px}
+.lb.on{display:flex}
+.lb img{max-width:100%;max-height:calc(100vh - 130px);border-radius:8px;object-fit:contain}
+.lb p{color:#eef2ea;font-size:15px;margin:14px 0 0;text-align:center;max-width:80ch}
+.lb button{position:absolute;border:0;background:rgba(255,255,255,.12);color:#fff;width:46px;height:46px;border-radius:50%;font-size:22px;cursor:pointer}
+.lb button:hover{background:var(--gold);color:#1c1503}
+.lb .x{top:16px;right:16px}.lb .p{left:14px;top:50%}.lb .nx{right:14px;top:50%}
+
+@media (max-width:860px){
+  body{font-size:16.5px}
+  section{padding:60px 0}
+  .hero .wrap{grid-template-columns:1fr;padding:48px 0 64px;gap:30px}
+  .emblem{order:-1;width:min(240px,62vw)}
+  .stats,.num{grid-template-columns:repeat(2,1fr)}
+  .cols,.passport,.award{grid-template-columns:1fr}
+  .grid.three{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+  .brand span{display:none}
+  footer .wrap{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.zoom img{transition:none}}
+
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="images/emblem.jpg" alt=""><span>АЛАША · САРЫБАС</span></a>
+    <nav class="links" aria-label="Бөлімдер">
+      <a href="#estelik">Естелік</a>
+      <a href="#kuspan">Құспан Бегешов</a>
+      <a href="#shezhire">Шежіре</a>
+      <a href="#esali">Есәлі бай</a>
+      <a href="#kokbie">Көкбие</a>
+      <a href="#expedition">Экспедиция</a>
+      <a href="#stones">Құлпытастар</a>
+      <a href="#awards">Төсбелгілер</a>
+      <a href="#people">Үлес қосқандар</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Байұлы · Байбарақ · Алаша</div>
+      <h1>Алаша <span>Сарыбас</span></h1>
+      <p class="lead">Сарыбас атаның ұрпақтары жинаған шежіре, ел аузындағы естелік, отбасылық мұрағат және Нарын құмындағы бабалар қорымынан табылған тарихи деректер — бір жерде.</p>
+      <div class="cta">
+        <a class="btn primary" href="#shezhire">Шежірені ашу</a>
+        <a class="btn ghost" href="#stones">Құлпытастарды көру</a>
+      </div>
+      <div class="stats">
+        <div><b>1783</b><span>ең көне құлпытастағы туған жыл</span></div>
+        <div><b>9</b><span>оқылған құлпытас</span></div>
+        <div><b>4</b><span>шежіре нұсқасы</span></div>
+        <div><b>112</b><span>сурет пен құжат</span></div>
+      </div>
+    </div>
+    <img class="emblem" src="images/emblem.jpg" alt="Алаша Сарыбас таңбасы: шаңырақ, ру таңбасы, «Байұлы · Байбарақ» жазуы">
+  </div>
+</div>
+
+<main>
+
+<section id="estelik">
+  <div class="wrap">
+    <div class="kicker">Естелік</div>
+    <h2>Қазақстан пионерлерінің алғашқы күндері</h2>
+    <p class="sub">1917 жылғы төңкеріс хабары Жаңақала өңіріндегі шағын ауылға қалай жеткенін сол кезде бала болған куәгердің өз аузынан жеткен естелік баяндайды.</p>
+    <div class="cols">
+      <div class="prose">
+        <p>Оқиға 1917 жылдың қарашасында Орал облысы Жаңақала ауданының Төлеш деген мекенінде өтеді. Ауылдағы хат танитын, заман ағымын ерте аңғарған кедей шаруа Қайрел Үбкенұлы жұртты ауыл ортасындағы «Үрпек» төбесіне жинатады. Хабарды үй-үйге жүгіріп таратқан — ауылдың жастары мен балалары: Төле баласы Жұмағали, Ерболат баласы Зейнолда, Мұрынтай баласы Жарғали, Жанамаұлы және басқалар. Естелік иесінің өзі де сол балалардың ішінде болған.</p>
+        <p>Төбе басында Қайрел ақсақал патша тағынан түскенін жариялайды. Сөзін дәлелдеу үшін Қызыл үйдегі патша суретін большевиктердің алып кеткенін өз көзімен көргенін айтады. Жиналған жұрт қуанып, бөріктерін аспанға атып, бірін-бірі құттықтайды; естелікте Бекенов Қамза, Досмұрғаметов Мақыш, Ратмал Қараша сияқты ауыл ағаларының есімдері аталады.</p>
+        <p>Бір-екі күннен кейін екінші жиын өтіп, ауылды басқарудың жаңа тәртібі енгізіледі: Совет үкіметі атынан ауылнай сайланып, алғашқы ауылдық Совет құрылады. Сегіз бен он екі жас аралығындағы балалар жиынның шетінде тұрып, үлкендердің әр сөзін тыңдайды.</p>
+        <p>Саяси өзгеріс оқу-ағарту ісіне де жол ашты: бір жылдан соң осы өңірдегі тұңғыш Совет мектебі есігін ашады. Естелік авторы бұл оқиғаларды кейінгі ұрпаққа ауыл шежіресінің қымбат дерегі ретінде қалдырған.</p>
+        <p class="note">Естелікті қазақ тіліне аударған — Сатыбалды Қанат (Тараз қаласы, 2026 жыл). Мұрағатта сондай-ақ Оразғали Төлесбаевтың «Алгембе» өлеңі сақталған; оны 1976 жылғы 25 тамызда Нұрман Ажухановтан жазып алған — Ғ. Бекешов.</p>
+      </div>
+      <ul class="facts">
+        <li><b>1917 жыл, қараша</b><span>Төлеш мекені, «Үрпек» төбесі — патша билігінің құлағаны туралы хабар жарияланды.</span></li>
+        <li><b>Алғашқы ауылдық Совет</b><span>Төрағасы — Сарсенбай Төлегенұлы. Мүшелері: Тамаш Игесінұлы, Қаздайбек Мабанұлы, Шолтыр Бегешұлы, Қайса Спанұлы және басқа азаматтар.</span></li>
+        <li><b>1918 жыл, қыркүйек</b><span>«Ақмолда» шағылында, Дүйсенғали Демесінұлының қыстауында тұңғыш Совет мектебі ашылды.</span></li>
+        <li><b>Куәгерлер</b><span>Оқиғаны 8–12 жастағы ауыл балалары өз көзімен көрген.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="kuspan" class="alt">
+  <div class="wrap">
+    <div class="kicker">Тұлға</div>
+    <h2>Құспан Бегешов</h2>
+    <p class="sub">Мемлекет және қоғам қайраткері, ел шежіресін қағазға түсіріп, кейінгі ұрпаққа аманаттаған шежіреші.</p>
+    <div class="cols">
+      <div class="prose">
+        <p>Құспан Бегешов (құжаттарда Ғұсман Бегешев деп те жазылады) — Сарыбас атаның ұрпағы. Сақталған суреттерде ол Қазақ ССР Жоғарғы Советінің Құрмет грамотасымен және Жоғарғы Совет депутатының төсбелгісімен бейнеленген. Өлкетанушылар оны Жаңақала өңірінің тарих және қоғам қайраткерлерінің қатарында атайды.</p>
+        <p>Еңбек ардагері ретінде мектептерге жиі шақырылып, оқушыларға ел тарихы мен шежірені әңгімелеген: 1972 жылғы 13 сәуірдегі кездесуде пионерлерге шежіре айтып, орта мектеп ұжымының құрметті қонағы болған. 1980 жылғы 19 тамызда Жамбыл облысы партия және комсомол ардагерлерінің кездесуіне қатысқан.</p>
+        <p>Оның басты мұрасы — «Кіші жүздің ішіндегі Алаша руы туралы» шежіресі. Арнау сөзі 1980 жылғы 15 ақпанда Жамбыл қаласында жазылған. Қолжазбаларды ұрпаққа Сатыбалды Өтегенұлы жеткізді.</p>
+      </div>
+      <ul class="facts">
+        <li><b>Зайыбы</b><span>Самия</span></li>
+        <li><b>Марапаты</b><span>Қазақ ССР Жоғарғы Советінің Құрмет грамотасы</span></li>
+        <li><b>Қызметі</b><span>Қазақ ССР Жоғарғы Советінің депутаты (төсбелгісі бойынша)</span></li>
+        <li><b>Мұрасы</b><span>Алаша руының шежіресі — төрт нұсқада сақталған</span></li>
+      </ul>
+    </div>
+
+    <h3>Құспан Бегешов және отбасы мүшелерінің фото деректері</h3>
+    <div class="grid "><figure class="ph "><button type="button" class="zoom" data-src="images/a8.jpg" data-cap="Қазақ ССР Жоғарғы Советінің Құрмет грамотасымен түскен сурет"><img loading="lazy" src="images/a8.jpg" alt="Қазақ ССР Жоғарғы Советінің Құрмет грамотасымен түскен сурет"></button><figcaption>Қазақ ССР Жоғарғы Советінің Құрмет грамотасымен түскен сурет</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a9.jpg" data-cap="Құспан зайыбы Самиямен"><img loading="lazy" src="images/a9.jpg" alt="Құспан зайыбы Самиямен"></button><figcaption>Құспан зайыбы Самиямен</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a10.jpg" data-cap="Жиында сөз сөйлеп тұрған сәт"><img loading="lazy" src="images/a10.jpg" alt="Жиында сөз сөйлеп тұрған сәт"></button><figcaption>Жиында сөз сөйлеп тұрған сәт</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a11.jpg" data-cap="Оқушылар мен ауыл жұртшылығымен кездесу"><img loading="lazy" src="images/a11.jpg" alt="Оқушылар мен ауыл жұртшылығымен кездесу"></button><figcaption>Оқушылар мен ауыл жұртшылығымен кездесу</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a12.jpg" data-cap="Курортта, 14.08.1961 жыл (фотосурет жазуы бойынша)"><img loading="lazy" src="images/a12.jpg" alt="Курортта, 14.08.1961 жыл (фотосурет жазуы бойынша)"></button><figcaption>Курортта, 14.08.1961 жыл (фотосурет жазуы бойынша)</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a13.jpg" data-cap="Ат үстінде"><img loading="lazy" src="images/a13.jpg" alt="Ат үстінде"></button><figcaption>Ат үстінде</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a14.jpg" data-cap="Жүк көлігі жанындағы топ сурет"><img loading="lazy" src="images/a14.jpg" alt="Жүк көлігі жанындағы топ сурет"></button><figcaption>Жүк көлігі жанындағы топ сурет</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a15.jpg" data-cap="Портрет. Қазақ ССР Жоғарғы Советі депутатының төсбелгісімен"><img loading="lazy" src="images/a15.jpg" alt="Портрет. Қазақ ССР Жоғарғы Советі депутатының төсбелгісімен"></button><figcaption>Портрет. Қазақ ССР Жоғарғы Советі депутатының төсбелгісімен</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a16.jpg" data-cap="Мінберде сөз сөйлеп тұрған сәт"><img loading="lazy" src="images/a16.jpg" alt="Мінберде сөз сөйлеп тұрған сәт"></button><figcaption>Мінберде сөз сөйлеп тұрған сәт</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a17.jpg" data-cap="Арыстан мүсінінің жанында"><img loading="lazy" src="images/a17.jpg" alt="Арыстан мүсінінің жанында"></button><figcaption>Арыстан мүсінінің жанында</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a18.jpg" data-cap="Демалыс орнындағы ғимарат алдында"><img loading="lazy" src="images/a18.jpg" alt="Демалыс орнындағы ғимарат алдында"></button><figcaption>Демалыс орнындағы ғимарат алдында</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a19.jpg" data-cap="Оқушылардың пионер галстугін тағу рәсімі"><img loading="lazy" src="images/a19.jpg" alt="Оқушылардың пионер галстугін тағу рәсімі"></button><figcaption>Оқушылардың пионер галстугін тағу рәсімі</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a20.jpg" data-cap="Кездесуге қатысушылармен бірге түскен топ сурет"><img loading="lazy" src="images/a20.jpg" alt="Кездесуге қатысушылармен бірге түскен топ сурет"></button><figcaption>Кездесуге қатысушылармен бірге түскен топ сурет</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a21.jpg" data-cap="Отбасылық сурет"><img loading="lazy" src="images/a21.jpg" alt="Отбасылық сурет"></button><figcaption>Отбасылық сурет</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a22.jpg" data-cap="Зоя Құспанқызы мен немересі"><img loading="lazy" src="images/a22.jpg" alt="Зоя Құспанқызы мен немересі"></button><figcaption>Зоя Құспанқызы мен немересі</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a23.jpg" data-cap="Туыстарымен бірге түскен отбасылық сурет"><img loading="lazy" src="images/a23.jpg" alt="Туыстарымен бірге түскен отбасылық сурет"></button><figcaption>Туыстарымен бірге түскен отбасылық сурет</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a24.jpg" data-cap="Домбыра тартып отырған сәт"><img loading="lazy" src="images/a24.jpg" alt="Домбыра тартып отырған сәт"></button><figcaption>Домбыра тартып отырған сәт</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a25.jpg" data-cap="Роман ағай отбасымен"><img loading="lazy" src="images/a25.jpg" alt="Роман ағай отбасымен"></button><figcaption>Роман ағай отбасымен</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a26.jpg" data-cap="Тагис аға"><img loading="lazy" src="images/a26.jpg" alt="Тагис аға"></button><figcaption>Тагис аға</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a27.jpg" data-cap="Қали Жантілеуов, күйші. Байтоқа Аманқұл ұрпағы"><img loading="lazy" src="images/a27.jpg" alt="Қали Жантілеуов, күйші. Байтоқа Аманқұл ұрпағы"></button><figcaption>Қали Жантілеуов, күйші. Байтоқа Аманқұл ұрпағы</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a28.jpg" data-cap="Жұмағали Құмарұлы (Жүністің немересі, Таңатар ұрпағы) зайыбы Райханмен"><img loading="lazy" src="images/a28.jpg" alt="Жұмағали Құмарұлы (Жүністің немересі, Таңатар ұрпағы) зайыбы Райханмен"></button><figcaption>Жұмағали Құмарұлы (Жүністің немересі, Таңатар ұрпағы) зайыбы Райханмен</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a29.jpg" data-cap="Ихсанов Сапарғали Жұмағалиұлы, Таңатар ұрпағы"><img loading="lazy" src="images/a29.jpg" alt="Ихсанов Сапарғали Жұмағалиұлы, Таңатар ұрпағы"></button><figcaption>Ихсанов Сапарғали Жұмағалиұлы, Таңатар ұрпағы</figcaption></figure></div>
+
+    <h3>Өмірбаяндық деректер және фотосуреттер сыртындағы жазбалар</h3>
+    <div class="grid docs"><figure class="ph "><button type="button" class="zoom" data-src="images/a31.jpg" data-cap="«Бегешев Ғұсманның өмірбаяны», 1-бет"><img loading="lazy" src="images/a31.jpg" alt="«Бегешев Ғұсманның өмірбаяны», 1-бет"></button><figcaption>«Бегешев Ғұсманның өмірбаяны», 1-бет</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a32.jpg" data-cap="«Бегешев Ғұсманның өмірбаяны», 2-бет"><img loading="lazy" src="images/a32.jpg" alt="«Бегешев Ғұсманның өмірбаяны», 2-бет"></button><figcaption>«Бегешев Ғұсманның өмірбаяны», 2-бет</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a33.jpg" data-cap="Фотосурет сыртындағы жазба: пионерлерге шежіре айтып тұрған кезі, 13.IV.1972 ж."><img loading="lazy" src="images/a33.jpg" alt="Фотосурет сыртындағы жазба: пионерлерге шежіре айтып тұрған кезі, 13.IV.1972 ж."></button><figcaption>Фотосурет сыртындағы жазба: пионерлерге шежіре айтып тұрған кезі, 13.IV.1972 ж.</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a34.jpg" data-cap="Фотосурет сыртындағы жазба: еңбек ардагерінің орта мектеп ұжымының құрметті қонағы болған кезі, 13.IV.1972 ж."><img loading="lazy" src="images/a34.jpg" alt="Фотосурет сыртындағы жазба: еңбек ардагерінің орта мектеп ұжымының құрметті қонағы болған кезі, 13.IV.1972 ж."></button><figcaption>Фотосурет сыртындағы жазба: еңбек ардагерінің орта мектеп ұжымының құрметті қонағы болған кезі, 13.IV.1972 ж.</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a35.jpg" data-cap="Фотосурет сыртындағы жазба: Жамбыл облысы партия және комсомол ардагерлерінің кездесуі, 19.08.1980 ж."><img loading="lazy" src="images/a35.jpg" alt="Фотосурет сыртындағы жазба: Жамбыл облысы партия және комсомол ардагерлерінің кездесуі, 19.08.1980 ж."></button><figcaption>Фотосурет сыртындағы жазба: Жамбыл облысы партия және комсомол ардагерлерінің кездесуі, 19.08.1980 ж.</figcaption></figure></div>
+  </div>
+</section>
+
+<section id="shezhire">
+  <div class="wrap">
+    <div class="kicker">Шежіре</div>
+    <h2>Сарыбас атаның тармақтары</h2>
+    <p class="sub">Кіші жүз — Байұлы — Алаша руы, Сары тайпасы. Төмендегі тарату шежіре мен құлпытас жазуларындағы деректерге сүйеніп қысқаша берілді.</p>
+
+    <div class="tree" role="group" aria-label="Шежіре таратуы">
+      <div class="gen"><div class="node">Құдайқұл</div></div>
+      <div class="arrow">ұлы</div>
+      <div class="gen"><div class="node main">Көбек батыр</div></div>
+      <div class="arrow">ұлы</div>
+      <div class="gen"><div class="node main">Сарыбас</div></div>
+      <div class="arrow">сегіз ұлы</div>
+      <div class="gen">
+        <div class="node main">Байтоқа</div><div class="node">Қожамберген<small>ұлы Бұқар (1785–1848)</small></div><div class="node">Бопай</div><div class="node">Болат</div>
+        <div class="node">Сәңкібай</div><div class="node">Сыланбет</div><div class="node">Есентай</div><div class="node">Мағыр</div>
+      </div>
+      <div class="arrow">Байтоқаның төртінші әйелінен</div>
+      <div class="gen">
+        <div class="node">Аманғали</div><div class="node">Аманғұл<small>(Аманқұл)</small></div><div class="node main">Таңатар</div><div class="node">Бөрте</div><div class="node">Шыңғырлау</div>
+      </div>
+      <div class="arrow">Таңатардың ұлдары</div>
+      <div class="gen">
+        <div class="node">Жиенәлі<small>1821–1872 · ұлы Бектеміш</small></div>
+        <div class="node main">Есәлі бай<small>1824–1907</small></div>
+        <div class="node">Қосәлі<small>77 жасында қайтқан</small></div>
+      </div>
+      <div class="arrow">Есәлінің ұлдары</div>
+      <div class="gen">
+        <div class="node main">Тастемір<small>1870–1935</small></div>
+        <div class="node">Жантемір<small>1872–1894</small></div>
+      </div>
+      <div class="arrow">Тастемірдің балалары (құлпытас жазуы бойынша)</div>
+      <div class="gen">
+        <div class="node">Сағынгерей</div><div class="node">Құмар</div><div class="node">Тагис</div><div class="node">Зайпхан</div>
+      </div>
+    </div>
+    <p class="note">Шежіреде бұдан бөлек Байжиен мен Бегештен, Төлештен, Әділден, Жұмағали мен Сапарғалидан, Кішәйдан, Шолтырдан, Иманғали мен Бахтылыдан, Ғұсман, Ғұмар және Жамиден тараған ұрпақтар, сондай-ақ кейінгі буын — Нұралы, Құттыбек, Нұрлыбек тармақтары таратылған. Толық тізім төмендегі қолжазба беттерінде.</p>
+
+    <h3>Шежірелік жұмыс нұсқалары</h3>
+    <p class="sub">Шежіре бірнеше рет көшіріліп, толықтырылған. Төрт нұсқаның әр беті суретке түсіріліп сақталды — бөлімді ашып, суретті басып үлкейтіңіз.</p>
+    <details class="acc"><summary><span>Қарындашпен жазылған алғашқы нұсқа</span><em>13 бет</em></summary><div class="grid docs"><figure class="ph "><button type="button" class="zoom" data-src="images/a37.jpg" data-cap="«Кіші жүздің ішіндегі Алаша руы туралы»"><img loading="lazy" src="images/a37.jpg" alt="«Кіші жүздің ішіндегі Алаша руы туралы»"></button><figcaption>«Кіші жүздің ішіндегі Алаша руы туралы»</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a38.jpg" data-cap="Алаша ұрпақтарының тізімі, 1–8 тармақтар"><img loading="lazy" src="images/a38.jpg" alt="Алаша ұрпақтарының тізімі, 1–8 тармақтар"></button><figcaption>Алаша ұрпақтарының тізімі, 1–8 тармақтар</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a39.jpg" data-cap="Алаша ұрпақтарының тізімі, 9–16 тармақтар"><img loading="lazy" src="images/a39.jpg" alt="Алаша ұрпақтарының тізімі, 9–16 тармақтар"></button><figcaption>Алаша ұрпақтарының тізімі, 9–16 тармақтар</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a40.jpg" data-cap="4-бет. Алаша руының тайпалары және өз атамызға дейінгі тарату"><img loading="lazy" src="images/a40.jpg" alt="4-бет. Алаша руының тайпалары және өз атамызға дейінгі тарату"></button><figcaption>4-бет. Алаша руының тайпалары және өз атамызға дейінгі тарату</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a41.jpg" data-cap="6-бет. Байжиеннен және Бегештен тараған ұрпақ"><img loading="lazy" src="images/a41.jpg" alt="6-бет. Байжиеннен және Бегештен тараған ұрпақ"></button><figcaption>6-бет. Байжиеннен және Бегештен тараған ұрпақ</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a42.jpg" data-cap="Таңатардан тараған ұрпақ"><img loading="lazy" src="images/a42.jpg" alt="Таңатардан тараған ұрпақ"></button><figcaption>Таңатардан тараған ұрпақ</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a43.jpg" data-cap="Төлештен тараған ұрпақ"><img loading="lazy" src="images/a43.jpg" alt="Төлештен тараған ұрпақ"></button><figcaption>Төлештен тараған ұрпақ</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a44.jpg" data-cap="8-бет. Әділден және Жұмағали, Сапарғалидан тараған ұрпақ"><img loading="lazy" src="images/a44.jpg" alt="8-бет. Әділден және Жұмағали, Сапарғалидан тараған ұрпақ"></button><figcaption>8-бет. Әділден және Жұмағали, Сапарғалидан тараған ұрпақ</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a45.jpg" data-cap="9-бет. Кішәйдан тараған ұрпақ"><img loading="lazy" src="images/a45.jpg" alt="9-бет. Кішәйдан тараған ұрпақ"></button><figcaption>9-бет. Кішәйдан тараған ұрпақ</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a46.jpg" data-cap="Шолтырдан тараған ұрпақ"><img loading="lazy" src="images/a46.jpg" alt="Шолтырдан тараған ұрпақ"></button><figcaption>Шолтырдан тараған ұрпақ</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a47.jpg" data-cap="11-бет. Иманғали мен Бахтылыдан тараған ұрпақ"><img loading="lazy" src="images/a47.jpg" alt="11-бет. Иманғали мен Бахтылыдан тараған ұрпақ"></button><figcaption>11-бет. Иманғали мен Бахтылыдан тараған ұрпақ</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a48.jpg" data-cap="12-бет. Ғұсман, Ғұмар және Жамиден тараған ұрпақ"><img loading="lazy" src="images/a48.jpg" alt="12-бет. Ғұсман, Ғұмар және Жамиден тараған ұрпақ"></button><figcaption>12-бет. Ғұсман, Ғұмар және Жамиден тараған ұрпақ</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a49.jpg" data-cap="13-бет. Шежіре авторының арнау сөзі, 15.II.1980 ж., Жамбыл қ."><img loading="lazy" src="images/a49.jpg" alt="13-бет. Шежіре авторының арнау сөзі, 15.II.1980 ж., Жамбыл қ."></button><figcaption>13-бет. Шежіре авторының арнау сөзі, 15.II.1980 ж., Жамбыл қ.</figcaption></figure></div></details>
+    <details class="acc"><summary><span>Сиямен көшірілген нұсқа</span><em>14 бет</em></summary><div class="grid docs"><figure class="ph "><button type="button" class="zoom" data-src="images/a50.jpg" data-cap="1-бет. «Кіші жүздің ішіндегі Алаша руы туралы»"><img loading="lazy" src="images/a50.jpg" alt="1-бет. «Кіші жүздің ішіндегі Алаша руы туралы»"></button><figcaption>1-бет. «Кіші жүздің ішіндегі Алаша руы туралы»</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a51.jpg" data-cap="2-бет. Алаша ұрпақтарының тізімі, 1–8 тармақтар"><img loading="lazy" src="images/a51.jpg" alt="2-бет. Алаша ұрпақтарының тізімі, 1–8 тармақтар"></button><figcaption>2-бет. Алаша ұрпақтарының тізімі, 1–8 тармақтар</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a52.jpg" data-cap="3-бет. Алаша ұрпақтарының тізімі, 9–16 тармақтар"><img loading="lazy" src="images/a52.jpg" alt="3-бет. Алаша ұрпақтарының тізімі, 9–16 тармақтар"></button><figcaption>3-бет. Алаша ұрпақтарының тізімі, 9–16 тармақтар</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a53.jpg" data-cap="4-бет. Алаша руының тайпалары және өз атамызға дейінгі тарату"><img loading="lazy" src="images/a53.jpg" alt="4-бет. Алаша руының тайпалары және өз атамызға дейінгі тарату"></button><figcaption>4-бет. Алаша руының тайпалары және өз атамызға дейінгі тарату</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a54.jpg" data-cap="5-бет. Таңатардан тараған ұрпақ"><img loading="lazy" src="images/a54.jpg" alt="5-бет. Таңатардан тараған ұрпақ"></button><figcaption>5-бет. Таңатардан тараған ұрпақ</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a55.jpg" data-cap="6-бет. Байжиеннен және Бегештен тараған ұрпақ"><img loading="lazy" src="images/a55.jpg" alt="6-бет. Байжиеннен және Бегештен тараған ұрпақ"></button><figcaption>6-бет. Байжиеннен және Бегештен тараған ұрпақ</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a56.jpg" data-cap="7-бет. Төлештен тараған ұрпақ"><img loading="lazy" src="images/a56.jpg" alt="7-бет. Төлештен тараған ұрпақ"></button><figcaption>7-бет. Төлештен тараған ұрпақ</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a57.jpg" data-cap="8-бет. Әділден және Жұмағали, Сапарғалидан тараған ұрпақ"><img loading="lazy" src="images/a57.jpg" alt="8-бет. Әділден және Жұмағали, Сапарғалидан тараған ұрпақ"></button><figcaption>8-бет. Әділден және Жұмағали, Сапарғалидан тараған ұрпақ</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a58.jpg" data-cap="Кішәйдан тараған ұрпақ"><img loading="lazy" src="images/a58.jpg" alt="Кішәйдан тараған ұрпақ"></button><figcaption>Кішәйдан тараған ұрпақ</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a59.jpg" data-cap="Шолтырдан тараған ұрпақ"><img loading="lazy" src="images/a59.jpg" alt="Шолтырдан тараған ұрпақ"></button><figcaption>Шолтырдан тараған ұрпақ</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a60.jpg" data-cap="11-бет. Иманғали мен Бахтылыдан тараған ұрпақ"><img loading="lazy" src="images/a60.jpg" alt="11-бет. Иманғали мен Бахтылыдан тараған ұрпақ"></button><figcaption>11-бет. Иманғали мен Бахтылыдан тараған ұрпақ</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a61.jpg" data-cap="12-бет. Ғұсман, Ғұмар және Жамиден тараған ұрпақ"><img loading="lazy" src="images/a61.jpg" alt="12-бет. Ғұсман, Ғұмар және Жамиден тараған ұрпақ"></button><figcaption>12-бет. Ғұсман, Ғұмар және Жамиден тараған ұрпақ</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a62.jpg" data-cap="13-бет. Шежіре авторының арнау сөзі, 15.II.1980 ж., Жамбыл қ."><img loading="lazy" src="images/a62.jpg" alt="13-бет. Шежіре авторының арнау сөзі, 15.II.1980 ж., Жамбыл қ."></button><figcaption>13-бет. Шежіре авторының арнау сөзі, 15.II.1980 ж., Жамбыл қ.</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a63.jpg" data-cap="Кейінгі ұрпақтардың кестесі (Нұралы, Құттыбек, Нұрлыбек тармақтары)"><img loading="lazy" src="images/a63.jpg" alt="Кейінгі ұрпақтардың кестесі (Нұралы, Құттыбек, Нұрлыбек тармақтары)"></button><figcaption>Кейінгі ұрпақтардың кестесі (Нұралы, Құттыбек, Нұрлыбек тармақтары)</figcaption></figure></div></details>
+    <details class="acc"><summary><span>Машинкаға басылған нұсқа</span><em>4 бет</em></summary><div class="grid docs"><figure class="ph "><button type="button" class="zoom" data-src="images/a64.jpg" data-cap="1-бет. «Кіші жүздің ішіндегі Алаша руы туралы»"><img loading="lazy" src="images/a64.jpg" alt="1-бет. «Кіші жүздің ішіндегі Алаша руы туралы»"></button><figcaption>1-бет. «Кіші жүздің ішіндегі Алаша руы туралы»</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a65.jpg" data-cap="2-бет. Таңатардан, Байжиеннен, Бегештен, Төлештен, Әділден тараған ұрпақ"><img loading="lazy" src="images/a65.jpg" alt="2-бет. Таңатардан, Байжиеннен, Бегештен, Төлештен, Әділден тараған ұрпақ"></button><figcaption>2-бет. Таңатардан, Байжиеннен, Бегештен, Төлештен, Әділден тараған ұрпақ</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a66.jpg" data-cap="3-бет. Жұмағалидан, Кішәйдан, Шолтырдан тараған ұрпақ"><img loading="lazy" src="images/a66.jpg" alt="3-бет. Жұмағалидан, Кішәйдан, Шолтырдан тараған ұрпақ"></button><figcaption>3-бет. Жұмағалидан, Кішәйдан, Шолтырдан тараған ұрпақ</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a67.jpg" data-cap="4-бет. Ишанғалидан, Бахтылыдан, Ғұсманнан, Құмардан, Жамиден тараған ұрпақ және арнау сөз"><img loading="lazy" src="images/a67.jpg" alt="4-бет. Ишанғалидан, Бахтылыдан, Ғұсманнан, Құмардан, Жамиден тараған ұрпақ және арнау сөз"></button><figcaption>4-бет. Ишанғалидан, Бахтылыдан, Ғұсманнан, Құмардан, Жамиден тараған ұрпақ және арнау сөз</figcaption></figure></div></details>
+    <details class="acc"><summary><span>Компьютерде терілген нұсқа</span><em>7 бет</em></summary><div class="grid docs"><figure class="ph "><button type="button" class="zoom" data-src="images/a68.jpg" data-cap="«Кіші жүз шежіресінің бастамасы»"><img loading="lazy" src="images/a68.jpg" alt="«Кіші жүз шежіресінің бастамасы»"></button><figcaption>«Кіші жүз шежіресінің бастамасы»</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a69.jpg" data-cap="«Кіші жүздің ішіндегі алаша руы туралы»"><img loading="lazy" src="images/a69.jpg" alt="«Кіші жүздің ішіндегі алаша руы туралы»"></button><figcaption>«Кіші жүздің ішіндегі алаша руы туралы»</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a70.jpg" data-cap="«Кіші жүздегі алаша тайфасының қысқаша шежіресі»"><img loading="lazy" src="images/a70.jpg" alt="«Кіші жүздегі алаша тайфасының қысқаша шежіресі»"></button><figcaption>«Кіші жүздегі алаша тайфасының қысқаша шежіресі»</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a71.jpg" data-cap="Алаша ұрпақтарының кеңейтілген тізімі"><img loading="lazy" src="images/a71.jpg" alt="Алаша ұрпақтарының кеңейтілген тізімі"></button><figcaption>Алаша ұрпақтарының кеңейтілген тізімі</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a72.jpg" data-cap="Таңатардан, Байжиеннен, Бегештен, Төлештен, Әділден тараған ұрпақ"><img loading="lazy" src="images/a72.jpg" alt="Таңатардан, Байжиеннен, Бегештен, Төлештен, Әділден тараған ұрпақ"></button><figcaption>Таңатардан, Байжиеннен, Бегештен, Төлештен, Әділден тараған ұрпақ</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a73.jpg" data-cap="3-бет. Жұмағалидан, Нұралыдан, Кішайдан, Шолтырдан тараған ұрпақ"><img loading="lazy" src="images/a73.jpg" alt="3-бет. Жұмағалидан, Нұралыдан, Кішайдан, Шолтырдан тараған ұрпақ"></button><figcaption>3-бет. Жұмағалидан, Нұралыдан, Кішайдан, Шолтырдан тараған ұрпақ</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a74.jpg" data-cap="4-бет. Иманғалидан, Бахтылыдан тараған ұрпақ және арнау сөз"><img loading="lazy" src="images/a74.jpg" alt="4-бет. Иманғалидан, Бахтылыдан тараған ұрпақ және арнау сөз"></button><figcaption>4-бет. Иманғалидан, Бахтылыдан тараған ұрпақ және арнау сөз</figcaption></figure></div></details>
+  </div>
+</section>
+
+<section id="esali" class="alt">
+  <div class="wrap">
+    <div class="kicker">Тарихи тұлға</div>
+    <h2>Есәлі бай Таңатарұлы</h2>
+    <p class="sub">1824–1907 жылдары өмір сүрген, Нарын құмы мен Қамыс-Самар өңіріне аты шыққан ірі бай, саудагер әрі атбегі. Сарыбастардың тірегі болған тұлға.</p>
+    <div class="cols">
+      <div class="prose">
+        <p>Есәлі бай туралы деректің көбі ел аузында сақталған. Оны Жаңақала өңірінің шежіреші ақсақалдары да, Ғұсман Бегешев сияқты қайраткерлер де жазып, айтып кеткен. Бұл әңгімелерді жинақтап, 2017 жылы «Дана» журналында жариялаған — өлкетанушы Тыныштық Өтешқалиев.</p>
+        <p><strong>Шаруашылығы.</strong> Ол ағайын-туысы мен сенімді серіктерін бір іске жұмылдыра білген. Жазда Қамыс-Самар көлдерінің жағасын жайлап, қыста Бекетай құмының қойнауын қыстаған. Әсіресе түйе малын ұнатқан: түйесінің саны екі мыңнан асып, өңірдегі ең ірі түйелі бай атанған. Малы мен жүнін Әжітархан базарына жеткізіп, түскен қаражатқа елге азық-түлік, киім-кешек, құрылыс материалын алдырған. Байлығының бір бөлігін шариғат жолымен халық игілігіне жұмсаған.</p>
+        <p><strong>Үлкен қоян жылы.</strong> 1879–1880 жылдардағы жұттан сақтану үшін өңір байлары малын Торғын мен Қайсаттан асырып, Еділ бойына қыстатуға айдайды. Қыс ауыр болып, малдың едәуір бөлігі қырылады. Есәлі қалған малын Жәнібек пен Тәни арқылы Арал сорының батыс жағалауына жеткізіп, Аралтөбеде Жаппас руының байлары Үмбетәлі, Қарабаймен кеңесіп, келесі жылы елге аман оралады. «Есәлі Еділ асып» деген сөз содан қалған деседі. Бұл оқиға Ниязғали жыраудың жұт туралы жырында да аталады.</p>
+        <p><strong>Қонысы.</strong> Бекетай құмының ортасындағы биік төбеде тастан салдырған үш үйі 1940 жылдарға дейін тұрған, жолаушылар мен бақташылар соған түсіп жүрген. 1928 жылғы тәркілеу кезінде мың түйе сиятын қара шеген ауласы өртеніп, бір ай бойы сөнбей жанған деген әңгіме бар.</p>
+        <p><strong>Атбегілігі.</strong> Есәлі Қамыс-Самар қисымындағы ат бәйгелерін ұйымдастырушылардың бірі болған. Ел аузындағы әңгіме бойынша, бір күні таңсәріде көк атымен Сламихинге (қазіргі Жалпақтал) барып, 260–270 шақырымдай жол жүріп, кешке қайта оралған. Мақаш әкімді арнайы қонаққа шақырып, кәсіп іздеп кеткен жарлы жерлестеріне қамқор болуды аманаттағаны да айтылады.</p>
+      </div>
+      <div>
+        <ul class="facts">
+          <li><b>1824–1907</b><span>Құлпытасындағы жазу бойынша 83 жасында қайтқан.</span></li>
+          <li><b>2000-нан астам түйе</b><span>Бір жолы Әжітархан нарығына 120 атан апарған деген дерек бар.</span></li>
+          <li><b>Қарым-қатынас жасаған жерлері</b><span>Әжітархан, Үйшік, Сламихин, Шортанды, Торғын, Қайсат, Орда, Тайпақ.</span></li>
+          <li><b>Ұлдары</b><span>Тастемір (Таштемір) және Жантемір.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Тастемір Есәліұлы: метіркелік жазба және құлпытас</h3>
+    <div class="passport">
+      <figure class="ph "><button type="button" class="zoom" data-src="images/tarihi-pasport.jpg" data-cap="Тарихи паспорт: 1871 жылғы метіркелік дәптердің № 17 жазбасы негізінде"><img loading="lazy" src="images/tarihi-pasport.jpg" alt="Тарихи паспорт: 1871 жылғы метіркелік дәптердің № 17 жазбасы негізінде"></button><figcaption>Тарихи паспорт: 1871 жылғы метіркелік дәптердің № 17 жазбасы негізінде</figcaption></figure>
+      <div>
+        <dl class="kv">
+          <dt>Жазба</dt><dd>метіркелік дәптер, № 17</dd>
+          <dt>Тіркелген жылы</dt><dd>1871 жыл</dd>
+          <dt>Туған күні</dt><dd>10-шы ақрап</dd>
+          <dt>Сәби</dt><dd>Тастемір (ер бала)</dd>
+          <dt>Әкесі</dt><dd>Есәлі Таңатарұлы</dd>
+          <dt>Анасы</dt><dd>Ұлман</dd>
+          <dt>Руы</dt><dd>Алаша</dd>
+          <dt>Тайпасы</dt><dd>Хұдайгүл</dd>
+          <dt>Толтырған</dt><dd>молда Сүйінішқали (Миқан) Майқыұлы</dd>
+          <dt>Оқыған</dt><dd>Альберт Абатұлы</dd>
+        </dl>
+        <p class="note">Араб жазуымен толтырылған дәптердегі жазба қазақшаға аударылып, «Тарихи паспорт» түрінде рәсімделген.</p>
+        <div class="single" style="max-width:300px;margin-top:22px"><figure class="ph "><button type="button" class="zoom" data-src="images/tastemir-stone.jpg" data-cap="Есәліұлы Тастемірдің құлпытасы (1870–1935)"><img loading="lazy" src="images/tastemir-stone.jpg" alt="Есәліұлы Тастемірдің құлпытасы (1870–1935)"></button><figcaption>Есәліұлы Тастемірдің құлпытасы (1870–1935)</figcaption></figure></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kokbie">
+  <div class="wrap">
+    <div class="kicker">Киелі мекен</div>
+    <h2>Көкбие шоқысы</h2>
+    <p class="sub">Құм ішіндегі биік төбе Есәлі байдың салт мінген көк биесінің атымен аталған. Ел аузында Көк бие бірнеше жүйрік тұлпардың анасы болған деседі. Шоқының маңында Сарыбас зираты мен Нұралыобасы орналасқан.</p>
+
+    <h3>Картадағы орны</h3>
+    <div class="grid two"><figure class="ph "><button type="button" class="zoom" data-src="images/a76.jpg" data-cap="Топографиялық картадағы Сарыбас құмы және оның маңы (масштабы 2,5 км)"><img loading="lazy" src="images/a76.jpg" alt="Топографиялық картадағы Сарыбас құмы және оның маңы (масштабы 2,5 км)"></button><figcaption>Топографиялық картадағы Сарыбас құмы және оның маңы (масштабы 2,5 км)</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a77.jpg" data-cap="Топографиялық картадағы Көкбие мекені, Сарыбас зираты және Нұралыобасы (масштабы 1 км)"><img loading="lazy" src="images/a77.jpg" alt="Топографиялық картадағы Көкбие мекені, Сарыбас зираты және Нұралыобасы (масштабы 1 км)"></button><figcaption>Топографиялық картадағы Көкбие мекені, Сарыбас зираты және Нұралыобасы (масштабы 1 км)</figcaption></figure></div>
+
+    <h3>Шоқы, оның маңы және төбедегі ұлутас үйіндісі</h3>
+    <div class="grid "><figure class="ph "><button type="button" class="zoom" data-src="images/a78.jpg" data-cap="Көкбие шоқысының көрінісі"><img loading="lazy" src="images/a78.jpg" alt="Көкбие шоқысының көрінісі"></button><figcaption>Көкбие шоқысының көрінісі</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a79.jpg" data-cap="Көкбие шоқысының беткейі"><img loading="lazy" src="images/a79.jpg" alt="Көкбие шоқысының беткейі"></button><figcaption>Көкбие шоқысының беткейі</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a80.jpg" data-cap="Көкбие шоқысының көрінісі"><img loading="lazy" src="images/a80.jpg" alt="Көкбие шоқысының көрінісі"></button><figcaption>Көкбие шоқысының көрінісі</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a81.jpg" data-cap="Көкбие шоқысының беткейі"><img loading="lazy" src="images/a81.jpg" alt="Көкбие шоқысының беткейі"></button><figcaption>Көкбие шоқысының беткейі</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a82.jpg" data-cap="Шоқы маңындағы дала"><img loading="lazy" src="images/a82.jpg" alt="Шоқы маңындағы дала"></button><figcaption>Шоқы маңындағы дала</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a83.jpg" data-cap="Шоқы маңындағы дала жолы"><img loading="lazy" src="images/a83.jpg" alt="Шоқы маңындағы дала жолы"></button><figcaption>Шоқы маңындағы дала жолы</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a84.jpg" data-cap="Шоқы маңындағы геодезиялық белгі"><img loading="lazy" src="images/a84.jpg" alt="Шоқы маңындағы геодезиялық белгі"></button><figcaption>Шоқы маңындағы геодезиялық белгі</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a85.jpg" data-cap="Геодезиялық белгі"><img loading="lazy" src="images/a85.jpg" alt="Геодезиялық белгі"></button><figcaption>Геодезиялық белгі</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a86.jpg" data-cap="Шоқы басындағы ескі ұлутас үйіндісі"><img loading="lazy" src="images/a86.jpg" alt="Шоқы басындағы ескі ұлутас үйіндісі"></button><figcaption>Шоқы басындағы ескі ұлутас үйіндісі</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a87.jpg" data-cap="Шоқы басындағы ескі ұлутас үйіндісі"><img loading="lazy" src="images/a87.jpg" alt="Шоқы басындағы ескі ұлутас үйіндісі"></button><figcaption>Шоқы басындағы ескі ұлутас үйіндісі</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a88.jpg" data-cap="Шоқы басындағы ескі ұлутас үйіндісі"><img loading="lazy" src="images/a88.jpg" alt="Шоқы басындағы ескі ұлутас үйіндісі"></button><figcaption>Шоқы басындағы ескі ұлутас үйіндісі</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a89.jpg" data-cap="Шоқы басындағы ескі ұлутас үйіндісі"><img loading="lazy" src="images/a89.jpg" alt="Шоқы басындағы ескі ұлутас үйіндісі"></button><figcaption>Шоқы басындағы ескі ұлутас үйіндісі</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a90.jpg" data-cap="Ұлутас үйіндісі және шоқы маңы"><img loading="lazy" src="images/a90.jpg" alt="Ұлутас үйіндісі және шоқы маңы"></button><figcaption>Ұлутас үйіндісі және шоқы маңы</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a91.jpg" data-cap="Шоқы басының жалпы көрінісі"><img loading="lazy" src="images/a91.jpg" alt="Шоқы басының жалпы көрінісі"></button><figcaption>Шоқы басының жалпы көрінісі</figcaption></figure></div>
+
+    <h3>Байтоқа Таңатар ұрпақтары бабалар басында</h3>
+    <div class="grid wide"><figure class="ph "><button type="button" class="zoom" data-src="images/a96.jpg" data-cap="Шоқы басында отырған автор Тлеген Теміржанұлы (Байтоқа Аманқұл ұрпағы)"><img loading="lazy" src="images/a96.jpg" alt="Шоқы басында отырған автор Тлеген Теміржанұлы (Байтоқа Аманқұл ұрпағы)"></button><figcaption>Шоқы басында отырған автор Тлеген Теміржанұлы (Байтоқа Аманқұл ұрпағы)</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a97.jpg" data-cap="Байтоқа Таңатар ұрпақтары Есәлі ата басында"><img loading="lazy" src="images/a97.jpg" alt="Байтоқа Таңатар ұрпақтары Есәлі ата басында"></button><figcaption>Байтоқа Таңатар ұрпақтары Есәлі ата басында</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a98.jpg" data-cap="Байтоқа Таңатар ұрпақтары Есәлі ата басында"><img loading="lazy" src="images/a98.jpg" alt="Байтоқа Таңатар ұрпақтары Есәлі ата басында"></button><figcaption>Байтоқа Таңатар ұрпақтары Есәлі ата басында</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a99.jpg" data-cap="Байтоқа Таңатар ұрпақтары Бегеш ата басында"><img loading="lazy" src="images/a99.jpg" alt="Байтоқа Таңатар ұрпақтары Бегеш ата басында"></button><figcaption>Байтоқа Таңатар ұрпақтары Бегеш ата басында</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a100.jpg" data-cap="Байтоқа Таңатар ұрпақтары Бегеш ата басында"><img loading="lazy" src="images/a100.jpg" alt="Байтоқа Таңатар ұрпақтары Бегеш ата басында"></button><figcaption>Байтоқа Таңатар ұрпақтары Бегеш ата басында</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a101.jpg" data-cap="Байтоқа Таңатар ұрпақтары"><img loading="lazy" src="images/a101.jpg" alt="Байтоқа Таңатар ұрпақтары"></button><figcaption>Байтоқа Таңатар ұрпақтары</figcaption></figure></div>
+  </div>
+</section>
+
+<section id="expedition" class="alt">
+  <div class="wrap">
+    <div class="kicker">Экспедиция · 2016</div>
+    <h2>Есәлі байдың қонысына сапар</h2>
+    <p class="sub">2016 жылғы 15 мамырда Жаңақала өлкетанушылары Есәлі байдың қонысы мен бабалар қорымын іздеп, құм ішіне бір күндік экспедиция жасады.</p>
+
+    <div class="num">
+      <div><b>270 км</b><span>барып-қайту жолы</span></div>
+      <div><b>16 сағат</b><span>06:00-ден 22:30-ға дейін</span></div>
+      <div><b>9 адам</b><span>жеті жолаушы мен екі жолбасшы</span></div>
+      <div><b>592 кг</b><span>ең үлкен құлпытастың есептелген салмағы</span></div>
+    </div>
+
+    <div class="cols">
+      <ol class="tl">
+        <li><time>06:00 · Жаңақала</time>Екі автокөлікпен жеті адам жолға шықты: Шаһидолла Әбуғалиев, Ғайбатолла Сәрсеков, Ғинаян Валиев, Тыныштық Өтешқалиев, Амантай Салимов, Мұратбек Жахатов және жүргізуші Мерлан Қыдырсиықов.</li>
+        <li><time>Сарыкөл</time>Елу шақырымнан соң жол бастаушылар — ауылдың байырғы тұрғындары Мұхтар Жүсіпбаев пен Елемес Сағынғалиев қосылды.</li>
+        <li><time>Шыман құлағы — Мәңке — Едірес төбесі</time>Мәңкеден әрі қарай жиырма жылдан бері ел тұрмайтын таза құм басталады. Қуаңшылық пен өрттен кейін бағдар беретін белгілер жойылған, бір көлік бұзылып, жолда қалдырылды.</li>
+        <li><time>Үш тас үйдің орны</time>Биік бұдыр басынан Есәлі байдың белуарына дейін құлаған үйлері табылды. Қабырғасы 20×25×40 см саман тастан қаланған; саз үнемдеу үшін тасқа түйе құмалағы қосылған.</li>
+        <li><time>Үлкен қара орын</time>8–10 шақырым оңтүстікте ұзындығы 80–90, ені 30–40 метр қоныс орны мен 10–12 құдықтың ізі кездесті — қонақ күтетін үлкен орын болған деп топшыланды.</li>
+        <li><time>Сарыбастар қорымы</time>Көз ұшында ботасы бар үлкен түйе көрініп, сол меңзеген бағыттан қорым табылды. Мұратбек қажы құран оқыды. Жеті құлпытастың жазуы оқылып, суретке түсірілді.</li>
+        <li><time>22:30 · Жаңақала</time>Қайтар жолда көліктің желдеткіші істен шығып, +27° ыстықта екі сағаттан аса тұрып қалды; оны Елемес қолдан жөндеп берді. Жол-жөнекей Шыман құлағындағы тағы бір құлпытас оқылды.</li>
+      </ol>
+      <div>
+        <div class="single"><figure class="ph "><button type="button" class="zoom" data-src="images/x1.jpg" data-cap="Экспедиция мүшелері Есәлі байдың тастан салынған үйлерінің орнында"><img loading="lazy" src="images/x1.jpg" alt="Экспедиция мүшелері Есәлі байдың тастан салынған үйлерінің орнында"></button><figcaption>Экспедиция мүшелері Есәлі байдың тастан салынған үйлерінің орнында</figcaption></figure></div>
+        <div class="single" style="margin-top:20px"><figure class="ph "><button type="button" class="zoom" data-src="images/x2.jpg" data-cap="Сарыбастар қорымы: шалқасынан жатқан үлкен құлпытасты орнынан тұрғызу сәті"><img loading="lazy" src="images/x2.jpg" alt="Сарыбастар қорымы: шалқасынан жатқан үлкен құлпытасты орнынан тұрғызу сәті"></button><figcaption>Сарыбастар қорымы: шалқасынан жатқан үлкен құлпытасты орнынан тұрғызу сәті</figcaption></figure></div>
+      </div>
+    </div>
+
+    <h3>Экспедиция қорытындысы</h3>
+    <div class="prose">
+      <p>Көк бие мен Күнберген төбелерінің аралығындағы бабалар жатқан қауымға өлкетанушылар «Сарыбастар қорымы» деген атау берді. Қорым бір-біріне жалғасқан екі құмды төбеден тұрады. Оның оңтүстік-шығысында Күнберген төбесі, шығысында Көк бие, батысында Әлтеке мешіті мен Едірес төбесі, солтүстік-шығысында Балғазы мен Ысық мешіті, солтүстігінде Айшуақ правитель қонысы, оңтүстігінде Сыралы жазығы жатыр.</p>
+      <p>Жол бағдары координатпен белгіленіп, картаға түсірілді; тастағы мәтіндер электронды түрде сақталды. Есәлінің үш үлкен, екі орташа үйінің орны анықталды. Зерттеушілер қорымды әлі де терең зерттеу қажет деп есептейді.</p>
+      <p class="note">Дереккөз: Тыныштық Өтешқалиев, Жаңақала өлкетанушылар алқасының мүшесі. «Есәлі байдың қонысы», «Дана» журналы, № 3–4 (34), 2017, 54–59-беттер, «Экспедиция» айдары. Бұл бетте мақаланың қысқаша мазмұны берілді.</p>
+    </div>
+  </div>
+</section>
+
+<section id="stones">
+  <div class="wrap">
+    <div class="kicker">Сарыбастар қорымы</div>
+    <h2>Құлпытастар</h2>
+    <p class="sub">Тастардағы жазулар араб әрпімен, шағатай-қазақ тілінде қашалған. Әрқайсысында марқұмның руы, аты-жөні, жасы, қайтқан жылы, тасты қойған адам және ру таңбасы көрсетілген. Жазуларды оқыған — Мұратбек қажы Жахатов.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>№</th><th>Аты-жөні</th><th>Жылдары</th><th>Жасы</th><th>Тасты қойған</th><th>Ерекшелігі</th></tr></thead>
+        <tbody><tr><td class="n">1</td><th scope="row">Бегеш Байжиенұлы</th><td>1834–1883</td><td>49</td><td>Төлеш мырза</td><td>Төрт қырына жазылған; шағатайша өлең жолдары мен қылыш суреті бар</td></tr><tr><td class="n">2</td><th scope="row">Есенбай Бұзаубайұлы</th><td>1826–1882</td><td>56</td><td>ұлы Мұхаммед мырза</td><td>Кәлима және өлім туралы арабша нақыл</td></tr><tr><td class="n">3</td><th scope="row">Жиенәлі Таңатарұлы</th><td>1821–1872</td><td>51</td><td>ұлы Бектеміш мырза</td><td>«Қабір — есік, өлім — кесе» мағынасындағы нақылдар</td></tr><tr><td class="n">4</td><th scope="row">Есәлі Таңатарұлы</th><td>1824–1907</td><td>83</td><td>баласы Таштемір (Тастемір) мырза</td><td>Жазуының бір бөлігі өшкен; жылы шамамен оқылады</td></tr><tr><td class="n">5</td><th scope="row">Ажар Жәлелсиыққызы, бәйбіше</th><td>1850–1896</td><td>46</td><td>—</td><td>Қызыл-қара бояуы сақталған, қылыш суреті бар</td></tr><tr><td class="n">6</td><th scope="row">Жантемір Есәліұлы</th><td>1872–1894</td><td>22</td><td>әкесі Есәлі бай</td><td>Таңатар Байтоқаұлының немересі деп көрсетілген</td></tr><tr><td class="n">7</td><th scope="row">Қосәлі Таңатарұлы (болжам)</th><td>190…</td><td>77</td><td>—</td><td>Жазуы көп өшкен, аты болжаммен анықталды</td></tr><tr><td class="n">8</td><th scope="row">Бұхар Хожабергенұлы</th><td>1785–1848</td><td>63</td><td>баласы Кейкі мырза</td><td>Қорымнан 2–3 шақырым оңтүстікте, төбе басында жалғыз тұр</td></tr><tr><td class="n">9</td><th scope="row">Бейіс Түркебайұлы</th><td>1783–1854</td><td>71</td><td>ұлы Тоғаш мырза</td><td>Шыман құлағында табылған</td></tr></tbody>
+      </table>
+    </div>
+    <p class="note">Бегеш Байжиенұлының тасы қорымдағы ең ірісі: ұзындығы 255 см, ені 44 см, қалыңдығы 24 см, салмағы шамамен 592 кг. Экспедиция кезінде ол шалқасынан жатқан жерінен тоғыз адамның күшімен тұрғызылды. Өлкетанушылардың айтуынша, Бөкей ордасы аумағында бұған дейін зерттелген мыңға жуық құлпытастың ішінде мұндай зор тас кездеспеген.</p>
+
+    <h3>Құлпытас суреттері</h3>
+    <div class="grid tall"><figure class="ph "><button type="button" class="zoom" data-src="images/stone-3.jpg" data-cap="Бегеш Байжиенұлының құлпытасы (1834–1883). Төрт қырына түгел жазылған, жазуында «1883» жылы анық оқылады"><img loading="lazy" src="images/stone-3.jpg" alt="Бегеш Байжиенұлының құлпытасы (1834–1883). Төрт қырына түгел жазылған, жазуында «1883» жылы анық оқылады"></button><figcaption>Бегеш Байжиенұлының құлпытасы (1834–1883). Төрт қырына түгел жазылған, жазуында «1883» жылы анық оқылады</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/stone-2.jpg" data-cap="Бегеш Байжиенұлының құлпытасы — бүйір қырындағы сопақ өрнекті жазулар"><img loading="lazy" src="images/stone-2.jpg" alt="Бегеш Байжиенұлының құлпытасы — бүйір қырындағы сопақ өрнекті жазулар"></button><figcaption>Бегеш Байжиенұлының құлпытасы — бүйір қырындағы сопақ өрнекті жазулар</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/stone-5.jpg" data-cap="Бегеш Байжиенұлының құлпытасы — бет жағы, төменгі шаршыда ру таңбасы"><img loading="lazy" src="images/stone-5.jpg" alt="Бегеш Байжиенұлының құлпытасы — бет жағы, төменгі шаршыда ру таңбасы"></button><figcaption>Бегеш Байжиенұлының құлпытасы — бет жағы, төменгі шаршыда ру таңбасы</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a94.jpg" data-cap="Бегеш Байжиенұлының құлпытасы — ақ шүберек байланған сәт"><img loading="lazy" src="images/a94.jpg" alt="Бегеш Байжиенұлының құлпытасы — ақ шүберек байланған сәт"></button><figcaption>Бегеш Байжиенұлының құлпытасы — ақ шүберек байланған сәт</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/x3.jpg" data-cap="№ 1. Бегеш Байжиенұлының құлпытасы (1834–1883). Экспедиция суреті, 2016 ж."><img loading="lazy" src="images/x3.jpg" alt="№ 1. Бегеш Байжиенұлының құлпытасы (1834–1883). Экспедиция суреті, 2016 ж."></button><figcaption>№ 1. Бегеш Байжиенұлының құлпытасы (1834–1883). Экспедиция суреті, 2016 ж.</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/stone-4.jpg" data-cap="Есәлі Таңатарұлының құлпытасы (1824–1907)"><img loading="lazy" src="images/stone-4.jpg" alt="Есәлі Таңатарұлының құлпытасы (1824–1907)"></button><figcaption>Есәлі Таңатарұлының құлпытасы (1824–1907)</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a92.jpg" data-cap="Есәлі Таңатарұлының құлпытасы — басына барған сәт"><img loading="lazy" src="images/a92.jpg" alt="Есәлі Таңатарұлының құлпытасы — басына барған сәт"></button><figcaption>Есәлі Таңатарұлының құлпытасы — басына барған сәт</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a93.jpg" data-cap="Есәлі Таңатарұлының құлпытасы"><img loading="lazy" src="images/a93.jpg" alt="Есәлі Таңатарұлының құлпытасы"></button><figcaption>Есәлі Таңатарұлының құлпытасы</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/x4.jpg" data-cap="№ 4. Есәлі Таңатарұлының құлпытасы (1824–1907). Экспедиция суреті, 2016 ж."><img loading="lazy" src="images/x4.jpg" alt="№ 4. Есәлі Таңатарұлының құлпытасы (1824–1907). Экспедиция суреті, 2016 ж."></button><figcaption>№ 4. Есәлі Таңатарұлының құлпытасы (1824–1907). Экспедиция суреті, 2016 ж.</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/tastemir-stone.jpg" data-cap="Есәліұлы Тастемірдің құлпытасы (1870–1935). Қоюшы балалары: Сағынгерей, Құмар, Тагис, Зайпхан"><img loading="lazy" src="images/tastemir-stone.jpg" alt="Есәліұлы Тастемірдің құлпытасы (1870–1935). Қоюшы балалары: Сағынгерей, Құмар, Тагис, Зайпхан"></button><figcaption>Есәліұлы Тастемірдің құлпытасы (1870–1935). Қоюшы балалары: Сағынгерей, Құмар, Тагис, Зайпхан</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/stone-1.jpg" data-cap="Араб жазулы ескі құлпытас — сопақ жиекті өрнек, төбесін мүк басқан"><img loading="lazy" src="images/stone-1.jpg" alt="Араб жазулы ескі құлпытас — сопақ жиекті өрнек, төбесін мүк басқан"></button><figcaption>Араб жазулы ескі құлпытас — сопақ жиекті өрнек, төбесін мүк басқан</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/x5.jpg" data-cap="№ 9. Бейіс Түркебайұлының құлпытасы (1783–1854), Шыман құлағы. Экспедиция суреті, 2016 ж."><img loading="lazy" src="images/x5.jpg" alt="№ 9. Бейіс Түркебайұлының құлпытасы (1783–1854), Шыман құлағы. Экспедиция суреті, 2016 ж."></button><figcaption>№ 9. Бейіс Түркебайұлының құлпытасы (1783–1854), Шыман құлағы. Экспедиция суреті, 2016 ж.</figcaption></figure></div>
+  </div>
+</section>
+
+<section id="awards" class="dark">
+  <div class="wrap">
+    <div class="kicker">Алаша Сарыбас қоры</div>
+    <h2>Төсбелгілер мен куәліктер</h2>
+    <p class="sub">Қор бабалар есімін ұлықтау үшін екі төсбелгі тағайындаған. Әр төсбелгімен бірге иесінің аты-жөні жазылатын куәлік табысталады.</p>
+
+    <div class="award">
+      <figure class="ph "><button type="button" class="zoom" data-src="images/medal-kuspan.jpg" data-cap="«Құспан Бегешов» атындағы төсбелгі"><img loading="lazy" src="images/medal-kuspan.jpg" alt="«Құспан Бегешов» атындағы төсбелгі"></button><figcaption>«Құспан Бегешов» атындағы төсбелгі</figcaption></figure>
+      <div>
+        <h3>«Құспан Бегешов» атындағы төсбелгі</h3>
+        <p>Қазақтың көрнекті мемлекет қайраткері, шежіреші әрі мәдениет жанашыры Құспан Бегешовтің құрметіне арналған. Алтын түстес дөңгелек белгінің ортасында қайраткердің портреті, жиегінде ою-өрнек пен «Алаша Сарыбас қоры» жазуы бар; көк лентаға тағылады.</p>
+        <figure class="ph "><button type="button" class="zoom" data-src="images/kualik-kuspan.jpg" data-cap="«Құспан Бегешов» төсбелгісінің куәлігі"><img loading="lazy" src="images/kualik-kuspan.jpg" alt="«Құспан Бегешов» төсбелгісінің куәлігі"></button><figcaption>«Құспан Бегешов» төсбелгісінің куәлігі</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="award">
+      <figure class="ph "><button type="button" class="zoom" data-src="images/medal-esali.jpg" data-cap="«Есәлі Таңатарұлы» атындағы төсбелгі"><img loading="lazy" src="images/medal-esali.jpg" alt="«Есәлі Таңатарұлы» атындағы төсбелгі"></button><figcaption>«Есәлі Таңатарұлы» атындағы төсбелгі</figcaption></figure>
+      <div>
+        <h3>«Есәлі Таңатарұлы» атындағы төсбелгі</h3>
+        <p>Алаша Сарыбастардың тірегі болған Есәлі Таңатарұлының есіміне арналған. Белгіде дала төсінде ақбоз ат мінген бай бейнеленген — Нарын құмы мен Көк бие аңызының көрінісі.</p>
+        <figure class="ph "><button type="button" class="zoom" data-src="images/kualik-esali.jpg" data-cap="«Есәлі Таңатарұлы» төсбелгісінің куәлігі"><img loading="lazy" src="images/kualik-esali.jpg" alt="«Есәлі Таңатарұлы» төсбелгісінің куәлігі"></button><figcaption>«Есәлі Таңатарұлы» төсбелгісінің куәлігі</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="single" style="max-width:760px;margin:34px auto 0"><figure class="ph "><button type="button" class="zoom" data-src="images/kualik-cover.jpg" data-cap="Куәліктің мұқабасы: Алаша Сарыбас таңбасы және Есәлі Таңатарұлының бейнесі"><img loading="lazy" src="images/kualik-cover.jpg" alt="Куәліктің мұқабасы: Алаша Сарыбас таңбасы және Есәлі Таңатарұлының бейнесі"></button><figcaption>Куәліктің мұқабасы: Алаша Сарыбас таңбасы және Есәлі Таңатарұлының бейнесі</figcaption></figure></div>
+  </div>
+</section>
+
+<section id="people">
+  <div class="wrap">
+    <div class="kicker">Алғыс</div>
+    <h2>Дерек жинауға үлес қосқандар</h2>
+    <p class="sub">Бұл жинақ бірнеше адамның жылдар бойғы еңбегінің нәтижесі.</p>
+    <div class="grid three"><figure class="ph "><button type="button" class="zoom" data-src="images/a103.jpg" data-cap="Тыныштық Өтешқалиев, өлкетанушы"><img loading="lazy" src="images/a103.jpg" alt="Тыныштық Өтешқалиев, өлкетанушы"></button><figcaption>Тыныштық Өтешқалиев, өлкетанушы</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a104.jpg" data-cap="Сатыбалды Өтегенұлы, Құспан ата қолжазбаларын жеткізуші"><img loading="lazy" src="images/a104.jpg" alt="Сатыбалды Өтегенұлы, Құспан ата қолжазбаларын жеткізуші"></button><figcaption>Сатыбалды Өтегенұлы, Құспан ата қолжазбаларын жеткізуші</figcaption></figure><figure class="ph "><button type="button" class="zoom" data-src="images/a105.jpg" data-cap="Нұралы Сапарғалиұлы, Таңатар ұрпағы. Фото деректерді, өмірбаян мен құжат суреттерін және шежіренің жұмыс нұсқаларын беруші"><img loading="lazy" src="images/a105.jpg" alt="Нұралы Сапарғалиұлы, Таңатар ұрпағы. Фото деректерді, өмірбаян мен құжат суреттерін және шежіренің жұмыс нұсқаларын беруші"></button><figcaption>Нұралы Сапарғалиұлы, Таңатар ұрпағы. Фото деректерді, өмірбаян мен құжат суреттерін және шежіренің жұмыс нұсқаларын беруші</figcaption></figure></div>
+    <ul class="tags" style="margin-top:28px">
+      <li>Тлеген Теміржанұлы — автор, Байтоқа Аманқұл ұрпағы</li>
+      <li>Сатыбалды Қанат — естелікті аударған</li>
+      <li>Альберт Абатұлы — метіркелік жазбаны оқыған</li>
+      <li>Мұратбек қажы Жахатов — құлпытас жазуларын оқыған</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="images/emblem.jpg" alt="">
+    <div>
+      <b>Алаша · Сарыбас</b>
+      <p>Байұлы · Байбарақ. Шежіре, естелік және тарихи деректер жинағы.</p>
+      <p>Материалдар <a href="https://iasli.qgs.com.kz">iasli.qgs.com.kz</a> сайтындағы жинақ пен отбасылық мұрағат негізінде дайындалды. Бабалар рухына мәңгілік фатиха!</p>
+    </div>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Суретті үлкейтіп қарау">
+  <button class="x" type="button" aria-label="Жабу">✕</button>
+  <button class="p" type="button" aria-label="Алдыңғы сурет">‹</button>
+  <button class="nx" type="button" aria-label="Келесі сурет">›</button>
+  <img alt="">
+  <p></p>
+</div>
+
+<script>
+(function () {
+  var lb = document.getElementById('lb'), im = lb.querySelector('img'), cap = lb.querySelector('p');
+  var items = [], cur = 0, last = null;
+  function visible() {
+    return Array.prototype.filter.call(document.querySelectorAll('.zoom'), function (b) { return b.offsetParent !== null; });
+  }
+  function show(i) {
+    cur = (i + items.length) % items.length;
+    im.src = items[cur].dataset.src; im.alt = items[cur].dataset.cap;
+    cap.textContent = items[cur].dataset.cap;
+  }
+  function close() { lb.classList.remove('on'); im.removeAttribute('src'); if (last) last.focus(); }
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('.zoom');
+    if (b) { items = visible(); last = b; show(items.indexOf(b)); lb.classList.add('on'); lb.querySelector('.x').focus(); return; }
+    if (e.target === lb || e.target.closest('.x')) close();
+    else if (e.target.closest('.p')) show(cur - 1);
+    else if (e.target.closest('.nx')) show(cur + 1);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (!lb.classList.contains('on')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') show(cur - 1);
+    if (e.key === 'ArrowRight') show(cur + 1);
+  });
+})();
+
+</script>
+</body>
+</html>
